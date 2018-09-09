@@ -47,5 +47,8 @@ public class UtilsTest {
     @Test
     public void isAnyNull() {
         assertTrue(Utils.isAnyNull((Object) null));
+        assertTrue(Utils.isAnyNull(1, 2, null));
+        assertTrue(Utils.isAnyNull(1, 2, null, 4));
+        assertFalse(Utils.isAnyNull(1, 2, 3, 4, 0));
     }
 }
